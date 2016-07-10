@@ -1,0 +1,46 @@
+<head>
+  <title>meteor-simple-schema-347-repro</title>
+</head>
+
+<body>
+{{> content}}
+</body>
+
+<template name="content">
+<h3>
+    Reproduction of issue <a href="https://github.com/aldeed/meteor-simple-schema/issues/347">#347</a> of meteor-simple-schema
+</h3>
+
+<div>
+    Number of DB entries:
+    <input type="text" id="n" value="10"/>
+
+    Number of sub-documents per entry:
+    <input type="text" id="m" value="50"/>
+</div>
+
+<div>
+    <button id="attach-schema">Attach Schema</button>
+    <br>
+    <button id="run-with-validate">validate: true</button>
+    <button id="run-without-validate">validate: false</button>
+    <button id="run-bypass">bypassCollection2: true</button>
+    <table id="result" border="1">
+        <thead>
+        <tr>
+            <th>Schema Attached</th>
+            <th>validate</th>
+            <th>bypassCollection2</th>
+            <th>DB entries</th>
+            <th>Sub-documents per entry</th>
+            <th>Insert time (ms)</th>
+            <th>Update time (ms)</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+</template>
+
+
